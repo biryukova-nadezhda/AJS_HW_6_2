@@ -3,10 +3,10 @@ export default function getSpecialAttack({ special }) {
 
   for (const elem of special) {
     const {
-      id, name, icon, description = 'Описание недоступно',
+      description = 'Описание недоступно', ...rest
     } = elem;
     result.push({
-      id, name, icon, description,
+      ...rest, description,
     });
   }
 
